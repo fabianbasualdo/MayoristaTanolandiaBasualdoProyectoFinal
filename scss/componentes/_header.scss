@@ -1,0 +1,15 @@
+/*Aplico un logo general para todas las secciones*/
+.logo{
+    width: 72px;
+    height: 72px;
+    background-image:url(/imagenes/LOGO.jpg);
+}
+
+.fondoheader{
+    background:map-get($map: $palette, $key: 'blue');
+}
+.textoheader{
+    color: white;
+    @include texto;
+    font-size: 18px;
+  }

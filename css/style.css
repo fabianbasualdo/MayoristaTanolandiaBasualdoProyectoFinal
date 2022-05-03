@@ -1,0 +1,190 @@
+@font-face {
+  font-family: Fuente;
+  src: url(fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf);
+}
+/****************************aplico FLEXBOX a contactos***************************/
+.contactosPadre {
+  grid-area: contactospadre;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.contactoshijos {
+  border: medium solid #999;
+  background-color: #666;
+}
+
+/********************************************************************************/
+/********************alineando con flex los horarios del footer****************************/
+.horario {
+  /*Aplico mixins*/
+  font-family: Fuente;
+  color: white;
+  /*APLICO _extends.scss*/
+}
+
+/*****************quitando los puntos a los menues y alineando con flex*********************/
+.menufoot {
+  /*Aplico mixins*/
+  font-family: Fuente;
+  color: white;
+  /*APLICO _extends.scss*/
+}
+
+.menufooterhijo ul {
+  list-style: none;
+}
+
+.menufooterhijo li a {
+  text-decoration: none;
+}
+
+/**************************************************************************************/
+.horario, .menufoot {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@font-face {
+  font-family: Fuente;
+  src: url(fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf);
+}
+/*Aplico un logo general para todas las secciones*/
+.logo {
+  width: 72px;
+  height: 72px;
+  background-image: url(/imagenes/LOGO.jpg);
+}
+
+.fondoheader {
+  background: blue;
+}
+
+.textoheader {
+  color: white;
+  font-family: Fuente;
+  color: white;
+  font-size: 18px;
+}
+
+/*variables */
+h1 {
+  font-family: Fuente;
+  color: white;
+}
+
+/*utilizo la VARIABLE para completar el nombre de la clase*/
+.dsc-title-primary {
+  /*aplico las variables*/
+  color: red;
+  font-size: 10rem;
+}
+
+/*****INICIO DEL NESTING*******/
+.dsc-card {
+  width: 202px;
+  padding: 0;
+  /*****/
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.25s;
+  /*****/
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: red;
+}
+.dsc-card img {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+.dsc-card h4 {
+  height: 90px;
+  line-height: 30px;
+  margin: 0;
+  /*Utilizo listas.scss*/
+  font-size: 16px;
+}
+
+/*****FIN DEL NESTING**********/
+/********/
+.contiene .dsc-card:hover {
+  transform: translate(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+/**********/
+.promociones {
+  transition: all 2s;
+}
+
+.promociones:hover {
+  transform: rotateY(180deg);
+}
+
+/***APLICO MIXINS.SCSS*/
+.btn2:hover {
+  transition: transform 1s;
+  transform: scale(1.2);
+}
+
+.IconoSocial:hover {
+  transition: transform 1s;
+  transform: scale(2);
+}
+
+/***FIN APLICO MIXINS.SCSS.*/
+/***APLICO MAPA*****/
+/*creo un footer general para todas las secciones*/
+.textofooter {
+  color: white;
+}
+
+.fondofooter {
+  background: blue;
+}
+
+/******FIN de APLICO MAPA*/
+.descripcionproductos {
+  float: left;
+}
+
+/****INICIO COLOR DEL POPOVER***/
+.popover {
+  background-color: blue;
+  border-color: blue;
+}
+
+.popover.top > .arrow:after {
+  border-right-color: blue;
+}
+
+.popover-content {
+  background-color: blue;
+}
+
+/****FIN COLOR DEL POPOVER***/
+@media only screen and (max-width: 991px) {
+  /*lo utilizo para centrar las card*/
+  .dsc-card {
+    margin: 0 auto;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+}
+body {
+  background-color: grey;
+}
+
+.textofooter {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */

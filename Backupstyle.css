@@ -1,0 +1,48 @@
+/****************************aplico FLEXBOX a contactos***************************/
+.contactosPadre{
+    grid-area: contactospadre;/*contactospadre esta declarado en grid-template-areas*/
+    display: flex;
+    flex-direction: column; /*su direccion sera como columna y no como row*/
+    flex-wrap: wrap; /* cuando se queda sin espacio en el contenedor genera una nueva columna*/
+    justify-content: space-evenly;/*asigno mismo espacio entre los elementos*/
+    text-align: center;
+}
+.contactoshijos{
+    border:medium solid #999;
+   /* width: 100%;*/
+    /*height: 30%;*/
+    background-color: #666;   
+}
+
+/********************************************************************************/
+
+/********************alineando con flex los horarios del footer****************************/
+.horario{
+    display:flex;
+    flex-direction: row;/*alinea los elementos en fila*/
+    flex-wrap: wrap;/*si se termina la caja del padre, pasa a la linea de abajo del padre*/
+    /*justify-content: flex-end;*/ /*todo el contenido del padre lo lleva al final*/
+justify-content: space-evenly;
+}
+
+
+
+/*****************quitando los puntos a los menues y alineando con flex*********************/
+
+.menufoot{
+  
+display:flex;
+flex-direction: row;
+flex-wrap:wrap;
+justify-content: space-evenly;
+}
+
+.menufooterhijo ul{
+
+list-style: none;
+}
+.menufooterhijo li a {
+    text-decoration: none;
+}
+
+/**************************************************************************************/

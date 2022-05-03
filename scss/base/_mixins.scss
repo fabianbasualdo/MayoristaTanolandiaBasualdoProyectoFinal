@@ -1,0 +1,28 @@
+@mixin prefijos {
+    &:hover{
+        transition: transform 1s;
+        transform:scale(2);
+    }
+    
+}
+
+@mixin prefijossucursales {
+    &:hover{
+        transition: transform 1s;
+        transform:scale(1.2);
+    }
+    
+}
+
+
+@font-face {
+    font-family: Fuente;
+    
+    src:url(fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf);
+} 
+
+@mixin texto {
+    font-family: Fuente;
+   color:white;
+    } 
+    

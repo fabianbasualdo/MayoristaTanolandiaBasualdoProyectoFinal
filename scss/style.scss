@@ -1,0 +1,143 @@
+@import 'base/_listas.scss';
+@import 'componentes/_footer.scss';
+@import 'base/_extends.scss';
+@import 'base/_mixins.scss';
+@import 'base/_mapas.scss';
+@import 'componentes/_header.scss';
+
+
+
+
+/*variables */
+$primary:red;
+$font-size:10rem;
+$brand:'dsc';
+
+h1 {
+    @include texto;
+   
+}
+
+/*utilizo la VARIABLE para completar el nombre de la clase*/
+.#{$brand}-title-primary {
+
+    /*aplico las variables*/
+    color: $primary;
+    font-size: $font-size;
+}
+
+/*****INICIO DEL NESTING*******/
+.dsc-card {
+    width: 202px;
+    padding: 0;
+
+    /*****/
+
+    box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.25s;
+
+    /*****/
+    border: {
+        radius: 15px;
+        width: 1px;
+        style: solid;
+        color: $primary;
+    }
+
+
+    img {
+        width: 200px;
+        height: 200px;
+        display: block;
+    }
+
+    h4 {
+        height: 90px;
+        line-height: 30px;
+        margin: 0;
+        /*Utilizo listas.scss*/
+        font-size: nth($size, 1);
+    }
+}
+
+/*****FIN DEL NESTING**********/
+
+/********/
+.contiene .dsc-card:hover {
+    transform: translate(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+/**********/
+.promociones {
+    transition: all 2s;
+}
+
+.promociones:hover {
+    transform: rotateY(180deg);
+}
+
+/***APLICO MIXINS.SCSS*/
+.btn2 {
+    @include prefijossucursales;
+}
+
+.IconoSocial {
+    @include prefijos;
+}
+
+
+/***FIN APLICO MIXINS.SCSS.*/
+
+/***APLICO MAPA*****/
+
+/*creo un footer general para todas las secciones*/
+.textofooter {
+    color: map-get($map: $palette, $key: 'white');
+}
+
+.fondofooter {
+    background: map-get($map: $palette, $key: 'blue');
+
+}
+
+/******FIN de APLICO MAPA*/
+.descripcionproductos {
+    float: left;
+}
+
+/****INICIO COLOR DEL POPOVER***/
+.popover {
+    background-color: blue; 
+    border-color: blue;
+    
+  }
+  .popover.top>.arrow:after {
+    border-right-color: blue;
+    
+  }
+  .popover-content {
+    background-color: blue;
+   
+  }
+ 
+/****FIN COLOR DEL POPOVER***/
+@media only screen and (max-width: 991px) {
+  /*lo utilizo para centrar las card*/
+    .dsc-card {
+        margin: 0 auto;
+
+    }
+
+    .card{
+        margin: 0 auto;
+    }
+  }
+
+  body{
+      background-color: grey;
+  }
+  .textofooter{
+    text-decoration:none;
+  }

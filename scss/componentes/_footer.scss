@@ -1,0 +1,54 @@
+@import '../base/mixins';
+/****************************aplico FLEXBOX a contactos***************************/
+
+.contactosPadre {
+    grid-area: contactospadre;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.contactoshijos {
+    border: medium solid #999;
+
+    background-color: #666;
+}
+
+/********************************************************************************/
+
+/********************alineando con flex los horarios del footer****************************/
+.horario {
+    /*Aplico mixins*/
+    @include texto;
+    
+
+    /*APLICO _extends.scss*/
+    @extend %flexbox-rws;
+    
+}
+
+
+
+/*****************quitando los puntos a los menues y alineando con flex*********************/
+
+.menufoot {
+     /*Aplico mixins*/
+    @include texto;
+    
+   
+
+    /*APLICO _extends.scss*/
+    @extend %flexbox-rws;
+}
+
+.menufooterhijo ul {
+
+    list-style: none;
+}
+
+.menufooterhijo li a {
+    text-decoration: none;
+}
+
+/**************************************************************************************/
