@@ -187,4 +187,9 @@ body {
   text-decoration: none;
 }
 
+.mapa {
+  display: flex;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=style.css.map */
